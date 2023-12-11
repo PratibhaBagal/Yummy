@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+       
+<link href="D:\CNC Practise notes\BOOTSTRAP\testimonials.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Testimonial Carousel</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 40px 0;
+}
+h2 {
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 140px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #db584e;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+    opacity: .8;
+}
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel-item {
+	color: #999;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #db584e;
+}
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+.carousel-control i {
+    font-size: 68px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+	color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {	
+	background: #555;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+</style>
+
+
+    <style type="text/css">
+        .carousel-inner img {
+            width: 20%;
+            height: 200px;
+            margin-left: 1030px;
+
+
+        }
+		
+		
+		
+		
+		
+    </style>
+
+</head>
+
+<body>
+    <div class="container bg-white text-dark">
+
+        <nav class="navbar navbar-expand-md bg-white navbar-white sticky-top ">
+            <div class="container-fluid">
+                <h1 class="text-dark">Yummy</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active" style="border-bottom: 3px solid red; font-size: 17px;"><a
+                                class="nav-link" href="Index.html" style="width:100px; text-align: center;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Aboutus.html"
+                                style="width: 100px; text-align: center;">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Menu.html"
+                                style="width: 100px; text-align: center;">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Events.html"
+                                style="width: 100px; text-align: center;">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Chefs.html"
+                                style="width: 100px; text-align: center;">Chefs</a></li>
+                        <li class="nav-item" style="font-weight: bold; color: gray; font-size: 17px;"><a
+                                class="nav-link" href="yummygallery.html"
+                                style="width: 100px; text-align: center;">Gallery</a></li>
+                        <li class="nav-item" style="font-weight:bolder gray; font-size: 17px;"><a class="nav-link"
+                                href="Contact.html" style="width: 100px; text-align: center;">Contact</a></li>
+                        <li class="nav-item"><button type="button" class="btn btn-danger" style="margin-left:60px">Book
+                                a Table</button></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr>
+
+
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h4 style="text-align: center;">OUR MENU</h4>
+            <p style="text-align:center;font-size: 50px;font-family:Chiller regular;">CHECK OUR <span
+                    style="color: red;">YUMMY MENU</span></p>
+        </div>
+
+    </div>
+    </div>
+
+
+    <div class="container bg-white text-dark">
+
+        <nav class="navbar navbar-expand-md bg-white navbar-white sticky-top ">
+            <div class="container-fluid">
+
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                          </button> -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active" style="border-bottom: 3px solid red; font-size: 17px;"><a
+                                class="nav-link" href="Home.html" style="width:100px; text-align: center;">Starters</a>
+                        </li>
+                        <li class="nav-item" style="border-bottom: 3px solid gray; font-size: 17px;margin-left:25px;"><a
+                                class="nav-link" href="Aboutus.html"
+                                style="width: 100px; text-align: center;">Breakfast</a></li>
+                        <li class="nav-item" style="border-bottom: 3px solid gray; font-size: 17px;margin-left:25px;"><a
+                                class="nav-link" href="Menu.html" style="width: 100px; text-align: center;">Lunch</a>
+                        </li>
+                        <li class="nav-item" style="border-bottom: 3px solid gray; font-size: 17px;margin-left:25px;"><a
+                                class="nav-link" href="Events.html" style="width: 100px; text-align: center;">Dinner</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <br>
+
+        <h5 style="text-align:center">MENU</h5>
+        <p style="text-align:center;font-size:42px;color:red">Starters</p>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap justify-content-center ">
+
+        <div class="row">
+            <div class=" col-sm-12 col-md-4 col-lg-4 col-xl-4 col-12  d-flex flex-column justify-content-center align-items-center">
+                <img id="zoom" src="img/hero-img.png" class="img-fluid  d-block">
+                <h4 id="link" style="text-align: center; color: red">Magnum Tiste</h4>
+                <p style="text-align:center">Lorem, deren, trataro, filede, nerada</p>
+                <h4 style="text-align: center; color: red">$5.95</h4>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img id="zoom" src="img/menu-item-2.png" class="img-fluid mx-auto d-block">
+                <h4 id="link" style="text-align: center; color: red">Aut Luia</h4>
+                <p style="text-align:center">Lorem, deren, trataro, filede, nerada</p>
+                <h4 style="text-align: center; color: red">$14.95</h4>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img id="zoom" src="img/menu-item-3.png" class="img-fluid mx-auto d-block">
+                <h4 id="link" style="text-align: center; color: red">Est Eligendi</h4>
+                <p style="text-align:center">Lorem, deren, trataro, filede, nerada</p>
+                <h4 style="text-align: center; color: red">$14.95</h4>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img id="zoom" src="img/menu-item-4.png" class="img-fluid mx-auto d-block">
+                <h4 id="link" style="text-align: center; color: red">Eos Luibusdam</h4>
+                <p style="text-align:center">Lorem, deren, trataro, filede, nerada</p>
+                <h4 style="text-align: center; color: red">$12.95</h4>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img id="zoom" src="img/menu-item-5.png" class="img-fluid mx-auto d-block">
+                <h4 id="link" style="text-align: center; color: red">Eos Luibusdamora</h4>
+                <p style="text-align:center">Lorem, deren, trataro, filede, nerada</p>
+                <h4 style="text-align: center; color: red">$12.95</h4>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img id="zoom" src="img/menu-item-6.png" class="img-fluid mx-auto d-block">
+                <h4 id="link" style="text-align: center; color: red">Laboriosam Direva</h4>
+                <p style="text-align:center">Lorem, deren, trataro, filede, nerada</p>
+                <h4 style="text-align: center; color: red">$9.95</h4>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+
+                 		                   		
+      
+        
+                   
+
+               
+
+               
+
+
+
+     
+
+
+
+
+
+
+</body>
+
+</html>
